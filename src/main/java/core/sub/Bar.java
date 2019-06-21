@@ -6,4 +6,8 @@ class Bar {
   static Foo[] baz() {
     return null;
   }
+
+  static Quux[] baz2() {
+    return null;
+  }
 }
