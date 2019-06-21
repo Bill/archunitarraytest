@@ -43,3 +43,10 @@ static Quux[] baz2()
 
 That signature generates no exception. ArchUnit recognizes that the array type is derived from `Quux` and that `Quux` resides in the `core.sub` package.
 
+A workaround is to add a clause like this to the rule:
+
+```java
+.or(type(Foo[].class))
+```
+
+But it seems wrong to have to explicitly mention array types.

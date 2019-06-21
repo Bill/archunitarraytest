@@ -40,6 +40,10 @@ Method <core.sub.Bar.baz()> has return type <[Lcore.Foo;> in (Bar.java:0)
                  then ArchUnit will throw no exception
 
                  */
+
+                // this is a workaround to the problem!
+                //.or(type(Foo[].class))
+
                 .or(type(Foo.class)));
     rule.check(importedClasses);
   }
